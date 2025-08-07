@@ -6,7 +6,7 @@ import {BLOG_TITLE} from '@/constants';
 import COMPONENT_MAP from '@/helpers/mdx-components';
 
 import styles from './postSlug.module.css';
-import DivisionGroupsDemo from '@/components/DivisionGroupsDemo';
+
 
 export async function generateMetadata({params}) {
   const {frontmatter} = await loadBlogPost(params.postSlug);
