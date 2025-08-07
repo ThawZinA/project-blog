@@ -1,29 +1,26 @@
 import React from 'react';
 
-import BlogSummaryCard from '@/components/BlogSummaryCard';
 import { getBlogPostList } from '@/helpers/file-helpers';
+import BlogSummaryCard from '@/components/BlogSummaryCard';
+
 import styles from './homepage.module.css';
-import { de } from 'date-fns/locale';
 
 async function Home() {
   const blogPosts = await getBlogPostList();
-  
+
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.mainHeading}>
         Latest Content:
       </h1>
 
-      {blogPosts.map(({slug,...delegated})=> {
-        return(
+      {blogPosts.map(({ slug, ...delegated }) => (
         <BlogSummaryCard
-          key={slug}  
+          key={slug}
           slug={slug}
-          {...delegated} //delegeted is used so that if there is any index,data added to content , it will automatically added too.
+          {...delegated}
         />
-        )
-      })}
-      
+      ))}
     </div>
   );
 }
