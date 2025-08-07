@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { range } from '@/utils';
 import Card from '@/components/Card';
 import SliderControl from '@/components/SliderControl';
+import {motion} from 'framer-motion';
 
 import Equation from './Equation';
 import styles from './DivisionGroupsDemo.module.css';
@@ -63,7 +64,8 @@ function DivisionGroupsDemo({
             <div key={groupIndex} className={styles.group}>
               {range(numOfItemsPerGroup).map((index) => {
                 return (
-                  <div
+                  <motion.div
+                    layout="true"
                     key={index}
                     className={styles.item}
                   />

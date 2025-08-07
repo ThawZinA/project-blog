@@ -4,6 +4,7 @@ import {
   Spline_Sans_Mono,
 } from 'next/font/google';
 import clsx from 'clsx';
+import MotionPreference from '@/components/MotionPreference';
 
 import { BLOG_TITLE, LIGHT_TOKENS, DARK_TOKENS } from '@/constants';
 
@@ -34,7 +35,8 @@ function RootLayout({ children }) {
   const theme = 'light';
 
   return (
-    <html
+    <MotionPreference reduceMotion="user">
+      <html
       lang="en"
       className={clsx(mainFont.variable, monoFont.variable)}
       data-color-theme={theme}
@@ -46,6 +48,7 @@ function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
+    </MotionPreference>
   );
 }
 
