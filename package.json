@@ -10,7 +10,7 @@
     "new-component": "new-component"
   },
   "dependencies": {
-    "bright": "1.0.0",
+    "bright": "0.8.4",
     "clsx": "1.2.1",
     "date-fns": "2.30.0",
     "eslint": "8.43.0",
