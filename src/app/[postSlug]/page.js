@@ -12,7 +12,7 @@ import styles from './postSlug.module.css';
 export async function generateMetadata({ params }) {
   const { postSlug } = await params;
 
-  const { frontmatter } = await loadBlogPost(
+  const { frontmatter } = loadBlogPost(
     postSlug
   );
 
